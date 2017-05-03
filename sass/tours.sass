@@ -1,0 +1,199 @@
+@import "fonts"
+@import "vars"
+
+* 
+  box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -ms-box-sizing: border-box
+  -o-box-sizing: border-box
+
+ul, ol
+  margin: 0
+  padding: 0
+  list-style: none
+
+img 
+  border-style: none
+
+h1, h2, h3, h4, h5, h6, p, figure, li
+  margin: 0
+
+img
+  border-style: none
+  display: block
+
+input, select, textarea 
+  vertical-align: middle
+  font: 100% arial, helvetica, sans-serif
+
+a 
+  text-decoration: none
+
+a:hover, a:active, a:focus
+  text-decoration: none
+
+html, body
+  height: 100%
+
+body
+	min-width: 320px
+	margin: 0
+	color: $text-color
+	overflow-x: hidden
+  font-family: "RobotoLight"
+  font-size: 18px
+  line-height: 1.7
+
+.header-tours
+	padding-top: 35px
+	background: url('../img/bg-line.png') repeat-x 0 100%
+	background-size: auto 52px
+	position: relative
+
+.top-buttons_holder
+	display: block
+	text-align: right
+	margin-bottom: 70px
+
+.header-btn
+	display: inline-block
+	border: 1px solid transparent
+  font-family: "RobotoLight"
+	font-size: 14px
+	line-height: 31px
+	border-radius: 5px
+	margin-left: 21px
+	width: 100px
+	background: none
+	text-align: center
+
+.btn-log-in
+	color: #000
+	border: 1px solid #999
+
+.btn-register
+	background-color: $theme-color
+	color: #fff
+
+.logo
+	position: absolute
+	bottom: 0
+	left: 50%
+	display: block
+	-webkit-transform: translate(-50%, 50px)
+	-ms-transform: translate(-50%, 50px)
+	-o-transform: translate(-50%, 50px)
+	transform: translate(-50%, 50px)
+
+.nav-tours
+	font-family: "LatoBold"
+	margin-top: 30px
+	margin-bottom: 35px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	-webkit-justify-content: space-between
+	-moz-justify-content: space-between
+	-ms-justify-content: space-between
+	-o-justify-content: space-between
+	justify-content: space-between
+	align-items: center
+	ul
+		list-style: none
+
+		li
+			display: inline-block
+			a
+				font-size: 20px
+				color: #000
+
+.nav-tours_left,
+.nav-tours_right
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	width: 38%
+
+.nav-tours_left
+	-webkit-justify-content: flex-end
+	-moz-justify-content: flex-end
+	-ms-justify-content: flex-end
+	-o-justify-content: flex-end
+	justify-content: flex-end
+	li
+		padding-left: 37px
+		&:first-child
+			padding-left: 0
+
+.nav-tours_right
+	-webkit-justify-content: flex-start
+	-moz-justify-content: flex-start
+	-ms-justify-content: flex-start
+	-o-justify-content: flex-start
+	justify-content: flex-start
+	li
+		padding-right: 37px
+
+.middle-link
+	padding: 0 35px
+	position: relative
+	&:before,
+	&:after
+		content: ''
+		display: block
+		width: 5px
+		height: 5px
+		background-color: $theme-color
+		position: absolute
+		top: 50%
+		-webkit-transform: translateY(-50%)
+		-ms-transform: translateY(-50%)
+		-o-transform: translateY(-50%)
+		transform: translateY(-50%)
+	&:before
+		left: 0
+	&:after
+		right: 0
+
+.behind-logo
+	width: 22%
+	height: 1px
+	visibility: hidden
+
+.tours-banner
+	background: url("../img/banner-01.jpg") no-repeat 0 0
+	min-height: 670px
+	background-size: cover
+
+.banner-box
+	margin-top: 130px
+
+
+.banner-box_top
+	padding-left: 35px
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 23px
+		height: 36px
+		display: block
+		background: url('../img/geo.png') no-repeat 0 0
+
+.banner-sticker
+	padding: 0 15px
+	display: inline-block
+	background-color: #3f4cae
+	font-size: 18px
+	line-height: 34px
+	text-transform: uppercase
+	margin-bottom: 25px
+	border-radius: 5px
+	color: #fff
