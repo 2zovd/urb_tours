@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 @font-face {
   font-family: "RobotoLight";
   font-style: normal;
@@ -248,6 +249,7 @@ body {
 }
 
 .banner-sticker {
+  font-family: 'RobotoMedium';
   padding: 0 15px;
   display: inline-block;
   background-color: #3f4cae;
