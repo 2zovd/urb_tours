@@ -8,7 +8,7 @@
 @font-face {
   font-family: "LatoBold";
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   src: url("../fonts/LatoBold/LatoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/LatoBold/LatoBold.woff") format("woff"), url("../fonts/LatoBold/LatoBold.ttf") format("truetype");
 }
 
@@ -22,7 +22,7 @@
 @font-face {
   font-family: "RobotoSlabBold";
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   src: url("../fonts/RobotoSlabBold/RobotoSlabBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoSlabBold/RobotoSlabBold.woff") format("woff"), url("../fonts/RobotoSlabBold/RobotoSlabBold.ttf") format("truetype");
 }
 
@@ -83,9 +83,10 @@ body {
   margin: 0;
   color: #292827;
   overflow-x: hidden;
-  overflow-x-font-family: "RobotoLight";
-  overflow-x-font-size: 18px;
-  overflow-x-line-height: 1.4;
+  font-family: "RobotoLight";
+  color: #292827;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .header-tours {
@@ -317,7 +318,6 @@ body {
   text-transform: uppercase;
   margin-bottom: 25px;
   border-radius: 5px;
-  font-family: "RobotoMedium";
   color: #fff;
 }
 
@@ -326,6 +326,7 @@ body {
   display: block;
   font-size: 34px;
   color: #fff;
+  margin-bottom: 7px;
 }
 
 .banner-paragraph {
@@ -350,6 +351,11 @@ body {
   color: #fff;
   text-align: center;
   vertical-align: middle;
+  border: 2px solid transparent;
+}
+
+.banner-btn:hover, .banner-btn:focus {
+  color: #fff;
 }
 
 .social-buttons {
@@ -394,6 +400,7 @@ body {
   margin-top: 0;
   margin-bottom: 35px;
   text-align: center;
+  color: #292827;
 }
 
 .btn-all-ladies {
@@ -407,6 +414,14 @@ body {
   display: inline-block;
   border-radius: 5px;
   margin: 0 auto;
+  -webkit-transition: all .15;
+  -o-transition: all .15;
+  transition: all .15;
+}
+
+.btn-all-ladies:hover {
+  background: #ea4c58;
+  color: #fff;
 }
 
 .tour-ladies_holder {
@@ -426,6 +441,561 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ladies-profile {
+  width: 32%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #5d5d5d;
+  margin-bottom: 55px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: left;
+}
+
+.ladies-profile_left {
+  width: 55%;
+  overflow: hidden;
+  position: relative;
+}
+
+.ladies-profile_left img {
+  width: 100%;
+  height: auto;
+}
+
+.add-to-favorites {
+  position: absolute;
+  display: inline-block;
+  height: 24px;
+  width: 21px;
+  background: #ff382d;
+  left: 7%;
+  top: 0;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  z-index: 100;
+}
+
+.add-to-favorites:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  margin-top: 24px;
+  border-bottom: 9px solid transparent;
+  border-left: 11px solid #ff382d;
+  border-right: 10px solid #ff382d;
+  -webkit-transition: all .1s;
+  -moz-transition: all .1s;
+  -ms-transition: all .1s;
+  -o-transition: all .1s;
+}
+
+.add-to-favorites:hover {
+  color: #fcff00;
+}
+
+.add-to-favorites span {
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.profile-id-video {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 110px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 0 7px 0 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.profile-id {
+  display: inline-block;
+  border-radius: 7px;
+  border: 1px solid #000;
+  background: #fff;
+  font-size: 13px;
+  line-height: 15px;
+  color: #000;
+  padding: 3px 6px;
+  font-family: 'RobotoSlabBold';
+}
+
+.play-video-button {
+  color: #f2f2f2;
+  background: #ff4132;
+  width: 31px;
+  height: 23px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 9px;
+  vertical-align: middle;
+  line-height: 23px;
+  -webkit-transition: all .15s;
+  -o-transition: all .15s;
+  transition: all .15s;
+}
+
+.play-video-button:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+  color: #fff;
+}
+
+.profile-photo-link {
+  position: absolute;
+  display: block;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.profile-photo-link:after {
+  font-family: 'FontAwesome';
+  position: absolute;
+  content: '\f144';
+  opacity: 0;
+  color: #fff;
+  font-size: 100px;
+  line-height: 1.1;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all .15s;
+  -o-transition: all .15s;
+  transition: all .15s;
+}
+
+.profile-photo-link:hover:after {
+  opacity: .7;
+}
+
+.profile-photo-link:active:after {
+  opacity: 1;
+}
+
+.search-profile-info {
+  width: 45%;
+  padding-left: 15px;
+}
+
+.profile-name {
+  display: block;
+  font-family: 'RobotoSlabBold';
+  letter-spacing: 0.7px;
+  font-size: 21px;
+  line-height: 25px;
+  color: #000;
+}
+
+.card-hold {
+  display: block;
+  color: #a0a0a0;
+  font-family: 'RobotoRegular';
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+
+.card-hold em {
+  display: block;
+  font-style: normal;
+  font-family: 'RobotoRegular';
+  font-size: 14px;
+  line-height: 17px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.card-hold em:before {
+  font-family: 'FontAwesome';
+  content: '\f004';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 11px;
+}
+
+.card-hold span {
+  display: block;
+}
+
+.card-hold.offline {
+  color: #a0a0a0;
+}
+
+.card-hold.offline em {
+  color: #a0a0a0;
+}
+
+.card-hold.online {
+  color: #26a19c;
+}
+
+.card-hold.online em {
+  color: #26a19c;
+}
+
+.profile-button {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 14px;
+  width: 125px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 0 9px;
+  -webkit-transition: box-shadow .15s;
+  -moz-transition: box-shadow .15s;
+  -ms-transition: box-shadow .15s;
+  -o-transition: box-shadow .15s;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.profile-button:hover {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.profile-button span {
+  color: #000;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.profile-button img {
+  margin-right: 10px;
+}
+
+.view-profile-button {
+  display: inline-block;
+  background: #ff382d;
+  color: #fff;
+  text-transform: capitalize;
+  font-family: 'RobotoRegular';
+  width: 125px;
+  font-size: 14px;
+  line-height: 32px;
+  border: 1px solid #ff382d;
+  border-radius: 7px;
+  -webkit-transition: all .15s;
+  -moz-transition: all .15s;
+  -ms-transition: all .15s;
+  -o-transition: all .15s;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.view-profile-button:hover {
+  background: transparent;
+  border-color: #ff382d;
+  color: #ff382d;
+}
+
+.view-profile-button:focus, .view-profile-button:active {
+  background: #ff382d;
+  color: #fff;
+}
+
+.tours-date {
+  background: url("../img/tour-date-bg.jpg") no-repeat 0 0;
+  background-size: 460px auto;
+  margin-bottom: 200px;
+}
+
+.tours-date .h2 {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.tours-date_block {
+  border-radius: 10px;
+  border: 2px solid #f24841;
+  padding: 35px 0;
+  min-height: 590px;
+}
+
+.tours-date_block-text {
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "RobotoLight";
+  margin-bottom: 70px;
+}
+
+.tours-dates_bottom {
+  text-align: center;
+}
+
+.tours-dates_title {
+  color: #292827;
+  padding: 0 25px;
+  font-family: "RobotoSlabBold";
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+  display: inline-block;
+}
+
+.tours-dates_title:before, .tours-dates_title:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: #ea4c58;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.tours-dates_title:before {
+  left: 0;
+}
+
+.tours-dates_title:after {
+  right: 0;
+}
+
+.dates-holder {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.date-block {
+  text-align: center;
+}
+
+.date-block span {
+  margin-bottom: 25px;
+  font-family: "RobotoRegular";
+  font-size: 16px;
+  line-height: 18px;
+  display: block;
+}
+
+.btn-participate {
+  font-family: "RobotoSlabBold";
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 35px;
+  background-color: #ea4c58;
+  color: #fff;
+  display: inline-block;
+  border-radius: 7px;
+}
+
+.tours-dates_content {
+  padding: 0 15px;
+}
+
+.tours-details_content {
+  padding: 0 15px;
+}
+
+.tours-details {
+  background: url("../img/tour-details-bg.jpg") no-repeat 95% 0;
+  background-size: 515px auto;
+  margin-bottom: 230px;
+}
+
+.tours-details .h2 {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.tours-details_border {
+  border-radius: 10px;
+  border: 2px solid #f24841;
+  padding: 40px 0 100px;
+  min-height: 800px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-align-items: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.tours-details_text {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -ms-align-items: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.tours-details_text p {
+  max-width: 330px;
+  font-style: italic;
+  padding: 0 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.tours-details_text p:before {
+  content: '';
+  width: 15px;
+  height: 5px;
+  background: -webkit-linear-gradient(left, #ea4c58 0px, #ea4c58 5px, #fff 5px, #fff 10px, #ea4c58 10px, #ea4c58 15px);
+  background: -moz-linear-gradient(left, #ea4c58 0px, #ea4c58 5px, #fff 5px, #fff 10px, #ea4c58 10px, #ea4c58 15px);
+  background: -ms-linear-gradient(left, #ea4c58 0px, #ea4c58 5px, #fff 5px, #fff 10px, #ea4c58 10px, #ea4c58 15px);
+  background: -o-linear-gradient(left, #ea4c58 0px, #ea4c58 5px, #fff 5px, #fff 10px, #ea4c58 10px, #ea4c58 15px);
+  background: linear-gradient(to left, #ea4c58 0px, #ea4c58 5px, #fff 5px, #fff 10px, #ea4c58 10px, #ea4c58 15px);
+  position: absolute;
+  top: 8px;
+  margin: 0 auto;
+  display: inline-block;
+  left: 0;
+}
+
+.tours-details_text p span {
+  margin-bottom: 4px;
+  margin-left: 10px;
+  width: 15px;
+  height: 5px;
+  background: -webkit-linear-gradient(left, #ea4c58 0px, #ea4c58 5px, #fff 5px, #fff 10px, #ea4c58 10px, #ea4c58 15px) no-repeat 0 50%;
+  background: -moz-linear-gradient(left, #ea4c58 0px, #ea4c58 5px, #fff 5px, #fff 10px, #ea4c58 10px, #ea4c58 15px) no-repeat 0 50%;
+  background: -ms-linear-gradient(left, #ea4c58 0px, #ea4c58 5px, #fff 5px, #fff 10px, #ea4c58 10px, #ea4c58 15px) no-repeat 0 50%;
+  background: -o-linear-gradient(left, #ea4c58 0px, #ea4c58 5px, #fff 5px, #fff 10px, #ea4c58 10px, #ea4c58 15px) no-repeat 0 50%;
+  background: linear-gradient(to left, #ea4c58 0px, #ea4c58 5px, #fff 5px, #fff 10px, #ea4c58 10px, #ea4c58 15px) no-repeat 0 50%;
+  display: inline-block;
+}
+
+.tour-detail_left {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   -ms-flex-direction: column;
@@ -433,20 +1003,99 @@ body {
   flex-direction: column;
 }
 
-.ladies-profile {
-  width: 32%;
-  border-radius: 5px;
-  overflow: hidden;
-  border: 1px solid #5d5d5d;
-  margin-bottom: 55px;
+.tour-detail_block {
+  text-align: center;
 }
 
-.ladies-profile_left {
-  width: 55%;
-  overflow: hidden;
+.tour-detail_block object {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 25px;
 }
 
-.ladies-profile_left img {
-  width: 100%;
-  height: auto;
+.tour-detail_block p {
+  display: block;
+  font-family: "RobotoRegular";
+  font-size: 16px;
+  line-height: 18px;
+  max-width: 210px;
+  margin: 0 auto;
+}
+
+.tour-plan .h2 {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.plan-dates {
+  font-family: "RobotoLight";
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 50px;
+}
+
+.plan-dates span {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.plan-dates p {
+  display: inline-block;
+  padding-left: 15px;
+  background: -webkit-linear-gradient(left, #ea4c58, #ea4c58) no-repeat 0 50%;
+  background: -moz-linear-gradient(left, #ea4c58, #ea4c58) no-repeat 0 50%;
+  background: -ms-linear-gradient(left, #ea4c58, #ea4c58) no-repeat 0 50%;
+  background: -o-linear-gradient(left, #ea4c58, #ea4c58) no-repeat 0 50%;
+  background: linear-gradient(to left, #ea4c58, #ea4c58) no-repeat 0 50%;
+  background-size: 5px 5px;
+}
+
+.plan-border {
+  border-radius: 10px;
+  border: 2px solid #f24841;
+  margin-top: 35px;
+  padding-top: 35px;
+  margin-bottom: 45px;
+  max-height: 365px;
+}
+
+.tour-plan_holder {
+  min-height: 500px;
+  background: url("../img/tour-plan-bg.jpg") no-repeat 15px 0;
+  background-size: 445px auto;
+}
+
+.day-title {
+  font-size: 72px;
+  line-height: 74px;
+  color: #f24841;
+  font-family: 'RobotoSlabBold';
+  display: block;
+  margin-bottom: 30px;
+}
+
+.day-subheding {
+  display: block;
+  padding: 7px 0 7px 65px;
+  background: url("../img/urb-ornament.svg") no-repeat 0 50%;
+  background-size: auto 140%;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 20px;
+  font-style: italic;
+  font-family: 'RobotoRegular';
+}
+
+.day-plan_text {
+  display: block;
+  font-size: 18px;
+  line-height: 32px;
+  color: #292827;
+  font-family: "RobotoLight";
+  margin-bottom: 130px;
+  font-weight: bold;
+}
+
+.plan-border_block {
+  padding-left: 30px;
 }
