@@ -33,6 +33,13 @@
   src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "RobotoBold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -87,6 +94,7 @@ body {
   color: #292827;
   font-size: 18px;
   line-height: 1.4;
+  min-width: 1170px;
 }
 
 .header-tours {
@@ -878,6 +886,8 @@ body {
   color: #fff;
   display: inline-block;
   border-radius: 7px;
+  outline: none;
+  border: none;
 }
 
 .tours-dates_content {
@@ -1022,6 +1032,10 @@ body {
   margin: 0 auto;
 }
 
+.tour-plan {
+  margin-bottom: 200px;
+}
+
 .tour-plan .h2 {
   text-align: left;
   margin-bottom: 18px;
@@ -1056,7 +1070,7 @@ body {
   margin-top: 35px;
   padding-top: 35px;
   margin-bottom: 45px;
-  max-height: 365px;
+  min-height: 365px;
 }
 
 .tour-plan_holder {
@@ -1092,10 +1106,204 @@ body {
   line-height: 32px;
   color: #292827;
   font-family: "RobotoLight";
-  margin-bottom: 130px;
+  margin-bottom: 50px;
   font-weight: bold;
 }
 
 .plan-border_block {
   padding-left: 30px;
+}
+
+.day-block {
+  text-align: center;
+}
+
+.day-block span {
+  text-align: center;
+  display: block;
+  font-style: italic;
+  font-family: 'RobotoRegular';
+  color: #949393;
+  font-size: 10px;
+  line-height: 12px;
+  margin-bottom: 7px;
+}
+
+.day-block button {
+  text-align: center;
+  display: block;
+  font-family: 'RobotoRegular';
+  border: none;
+  background: none;
+  font-size: 13px;
+  line-height: 15px;
+  color: #949393;
+  padding: 0 30px 0 20px;
+  position: relative;
+  outline: none;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all .15s;
+  -o-transition: all .15s;
+  transition: all .15s;
+  height: 20px;
+}
+
+.day-block button:after {
+  font-family: 'FontAwesome';
+  content: '\f054';
+  display: block;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+  transform: translateY(50%);
+  right: 0;
+  color: #919191;
+  font-size: 14px;
+  line-height: 16px;
+  position: absolute;
+}
+
+.days-row {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.days-row .day-block:last-child button:after {
+  display: none;
+}
+
+.active-day.day-block span {
+  font-size: 17px;
+  line-height: 19px;
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.active-day.day-block button {
+  font-family: 'RobotoBold';
+  font-size: 25px;
+  line-height: 27px;
+  color: #292827;
+}
+
+.active-day.day-block button:after {
+  color: #f24841;
+}
+
+.participate-hold {
+  width: 100%;
+  background: -webkit-linear-gradient(left, #acbeee 0, #b8a9d3 50%, #c296ba 100%);
+}
+
+.participate {
+  min-height: 185px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.participate strong {
+  font-family: 'RobotoBold';
+  font-size: 20px;
+  line-height: 22px;
+  color: #fff;
+  max-width: 500px;
+  text-align: center;
+}
+
+.participate .btn-participate {
+  border: none;
+  outline: none;
+}
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /**/
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /**/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /**/
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**/
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/
+}
+
+/*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /**/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /**/
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/
 }
