@@ -1463,6 +1463,42 @@ input[type='checkbox']:checked + label:after {
   text-align: center;
 }
 
+.join-us_hold {
+  background: #3f4cae;
+  width: 100%;
+  padding: 55px 0;
+}
+
+.join-us_hold .btn-tour {
+  width: 180px;
+}
+
+.join-us {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.join-us-title {
+  font-size: 36px;
+  line-height: 38px;
+  color: #fff;
+  font-family: 'RobotoSlabLight';
+}
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
