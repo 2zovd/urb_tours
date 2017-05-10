@@ -8,6 +8,22 @@
   -ms-box-sizing: border-box
   -o-box-sizing: border-box
 
+*::-webkit-input-placeholder
+	color: #999
+	opacity: 1
+
+*:-moz-placeholder
+	color: #999
+	opacity: 1
+
+*::-moz-placeholder
+	color: #999
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #999
+	opacity: 1
+
 ul, ol
   margin: 0
   padding: 0
@@ -46,7 +62,6 @@ body
 	color: #292827
 	font-size: 18px
 	line-height: 1.4
-	min-width: 1170px
 
 .header-tours
 	padding-top: 35px
@@ -965,6 +980,7 @@ body
 .participate-hold
 	width: 100%
 	background: -webkit-linear-gradient(left, #acbeee 0, #b8a9d3 50%, #c296ba 100%)
+	margin-bottom: 60px
 
 .participate
 	min-height: 185px
@@ -988,8 +1004,122 @@ body
 		color: #fff
 		max-width: 500px
 		text-align: center
-	.btn-participate
-		border: none
-		outline: none
+
+.contact-subheading
+	display: block
+	text-align: center
+	font-family: "RobotoLight"
+	color: #292827
+	font-size: 14px
+	line-height: 16px
+	margin-bottom: 50px
+
+.contact-form
+	padding: 50px 55px
+	box-shadow: 0 0 100px rgba(0,0,0,.15)
+	margin-bottom: 115px
+
+.h3
+	font-family: "RobotoSlabBold"
+	font-size: 24px
+	line-height: 26px
+	padding-bottom: 40px
+	position: relative
+	text-align: center
+	margin-bottom: 60px
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		background: url('../img/heading-ornament.png') no-repeat 0 100%
+		bottom: 0
+		left: 50%
+		width: 170px
+		height: 25px
+		-webkit-transform: translateX(-50%)
+		-ms-transform: translateX(-50%)
+		-o-transform: translateX(-50%)
+		transform: translateX(-50%)
+
+.form-input
+	font-size: 16px
+	line-height: 30px
+	padding: 0 10px
+	font-family: "RobotoLight"
+	margin-bottom: 30px
+	border: none
+	border-bottom: 1px solid rgba(0,0,0,.23)
+	width: 100%
+	outline: none
+	&:focus
+		color: #ea4c58
+		border-bottom-color: rgba(234,76,88,.25)
+
+.form-subtitle
+	color: #999
+	font-family: "RobotoLight"
+	font-size: 16px
+	line-height: 18px
+	margin-top: 35px
+	margin-bottom: 35px
+	text-align: center
+
+.checkbox-holder
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	-webkit-justify-content: center
+	-moz-justify-content: center
+	-ms-justify-content: center
+	-o-justify-content: center
+	justify-content: center
+	-ms-align-items: center
+	align-items: center
+
+.checkbox-item
+	margin: 0 15px
+label
+	margin: 0
+	font-family: "RobotoSlabLight"
+	font-size: 14px
+	line-height: 16px
+	color: #c4c1bf
+input[type="checkbox"]
+	margin: 0
+
+/* .squaredThree */
+.squaredThree
+	width: 13px
+	position: relative
+	label
+		border: 2px solid #bfbfbf
+		width: 13px
+		height: 14px
+		cursor: pointer
+		position: absolute
+		top: 0
+		left: 0
+		&:after
+			content: ''
+			width: 9px
+			height: 5px
+			position: absolute
+			top: 4px
+			left: 4px
+			border: 3px solid #44b759
+			border-top: none
+			border-right: none
+			background: transparent
+			opacity: 0
+			transform: rotate(-45deg)
+		&:hover::after
+			opacity: 0.3
+	input[type='checkbox']
+		visibility: hidden
+		&:checked + label:after
+			opacity: 1
+
 
 @import 'media'
