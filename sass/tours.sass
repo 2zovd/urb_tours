@@ -698,11 +698,12 @@ body
 		line-height: 18px
 		display: block
 
-.btn-participate
+.btn-tour
 	font-family: "RobotoSlabBold"
 	font-size: 16px
 	line-height: 50px
 	padding: 0 35px
+	width: 160px
 	background-color: #ea4c58
 	color: #fff
 	display: inline-block
@@ -1004,6 +1005,8 @@ body
 		color: #fff
 		max-width: 500px
 		text-align: center
+	.btn-tour
+		width: 200px
 
 .contact-subheading
 	display: block
@@ -1077,49 +1080,75 @@ body
 	justify-content: center
 	-ms-align-items: center
 	align-items: center
+	margin-bottom: 30px
 
 .checkbox-item
 	margin: 0 15px
-label
-	margin: 0
-	font-family: "RobotoSlabLight"
-	font-size: 14px
-	line-height: 16px
-	color: #c4c1bf
-input[type="checkbox"]
-	margin: 0
+	position: relative
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	-webkit-justify-content: space-between
+	-moz-justify-content: space-between
+	-ms-justify-content: space-between
+	-o-justify-content: space-between
+	justify-content: space-between
+	-ms-align-items: center
+	align-items: center
+	label
+		margin: 0
+		font-family: "RobotoSlabLight"
+		font-size: 14px
+		line-height: 16px
+		color: #c4c1bf
+	input[type="checkbox"]
+		margin: 0
 
 /* .squaredThree */
-.squaredThree
+.checkbox-item_hold
 	width: 13px
 	position: relative
-	label
-		border: 2px solid #bfbfbf
-		width: 13px
-		height: 14px
-		cursor: pointer
-		position: absolute
-		top: 0
-		left: 0
-		&:after
-			content: ''
-			width: 9px
-			height: 5px
-			position: absolute
-			top: 4px
-			left: 4px
-			border: 3px solid #44b759
-			border-top: none
-			border-right: none
-			background: transparent
-			opacity: 0
-			transform: rotate(-45deg)
-		&:hover::after
-			opacity: 0.3
-	input[type='checkbox']
-		visibility: hidden
-		&:checked + label:after
-			opacity: 1
+	margin-right: 10px
 
+.check-label
+	border: 2px solid #bfbfbf
+	width: 13px
+	height: 14px
+	cursor: pointer
+	position: absolute
+	top: 50%
+	left: 0
+	margin: 0
+	-webkit-transform: translateY(-50%)
+	-ms-transform: translateY(-50%)
+	-o-transform: translateY(-50%)
+	transform: translateY(-50%)
+	&:after
+		content: ''
+		width: 9px
+		height: 5px
+		position: absolute
+		top: 2px
+		left: 1px
+		border: 3px solid #44b759
+		border-top: none
+		border-right: none
+		background: transparent
+		opacity: 0
+		transform: rotate(-45deg)
+	&:hover::after
+		opacity: 0.3
+input[type='checkbox']
+	visibility: hidden
+	&:checked + label:after
+		opacity: 1
+
+.preferred-method
+	margin-bottom: 40px
+
+.contact-us-form
+	text-align: center
 
 @import 'media'
