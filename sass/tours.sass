@@ -253,21 +253,58 @@ body
 .banner-title
 	font-family: "RobotoSlabBold"
 	display: block
-	font-size: 34px
+	font-size: 47px
+	line-height: 49px
 	color: #fff
-	margin-bottom: 7px
+	margin-bottom: 30px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	-webkit-display: flex
+	-moz-display: flex
+	-ms-display: flex
+	-o-display: flex
+	display: flex
+	-webkit-justify-content: flex-start
+	-moz-justify-content: flex-start
+	-ms-justify-content: flex-start
+	-o-justify-content: flex-start
+	justify-content: flex-start
+	-ms-align-items: center
+	align-items: center
+
+.banner-title-left
+	padding-right: 45px
+	position: relative
+	margin-right: 25px
+	span
+		display: block
+	&:after
+		content: ''
+		width: 5px
+		height: 100%
+		position: absolute
+		right: 0
+		top: 0
+		background: #fff
 
 .banner-paragraph
 	font-family: "RobotoRegular"
 	display: block
-	font-size: 22px
+	font-size: 28px
+	line-height: 35px
 	color: #fff
 	margin-bottom: 35px
-	max-width: 320px
+	max-width: 400px
 
 .banner-btn
 	display: inline-block
-	background: #e94b57
+	background: -webkit-linear-gradient(left, #d81a29, #ea4c58)
+	background: -moz-linear-gradient(left, #d81a29, #ea4c58)
+	background: -ms-linear-gradient(left, #d81a29, #ea4c58)
+	background: -o-linear-gradient(left, #d81a29, #ea4c58)
+	background: linear-gradient(to right, #d81a29, #ea4c58)
 	border-radius: 5px
 	font-family: "RobotoSlabBold"
 	text-transform: uppercase
@@ -278,10 +315,18 @@ body
 	color: #fff
 	text-align: center
 	vertical-align: middle
-	border: 2px solid transparent
-	&:hover,
+	border: none
+	&:hover
+		color: #fff
+		background: #ea4c58
+	&:active,
 	&:focus
 		color: #fff
+		background: -webkit-linear-gradient(left, #9b121c, #ea4c58)
+		background: -moz-linear-gradient(left, #9b121c, #ea4c58)
+		background: -ms-linear-gradient(left, #9b121c, #ea4c58)
+		background: -o-linear-gradient(left, #9b121c, #ea4c58)
+		background: linear-gradient(to right, #9b121c, #ea4c58)
 
 .tours-banner_wrap
 	.social-buttons
@@ -332,13 +377,18 @@ body
 	display: inline-block
 	border-radius: 5px
 	margin: 0 auto
-	-webkit-transition: all .15
-	-o-transition: all .15
-	transition: all .15
+	-webkit-transition: all .1
+	-o-transition: all .1
+	transition: all .1
 	&:hover
-		background: #ea4c58
+		background: #f26e6e
 		color: #fff
-		
+		border-color: #ea4c58
+	&:active,
+	&:focus
+		color: #fff
+		border-color: #ea4c58
+		background-color: #ea4c58
 
 .tour-ladies_holder
 	display: -webkit-flex
@@ -604,27 +654,25 @@ body
 	display: inline-block
 	background: #ff382d
 	color: #fff
-	text-transform: capitalize
 	font-family: 'RobotoRegular'
 	width: 125px
 	font-size: 14px
 	line-height: 32px
-	border: 1px solid #ff382d
-	border-radius: 7px
-	-webkit-transition: all .15s
-	-moz-transition: all .15s
-	-ms-transition: all .15s
-	-o-transition: all .15s
+	border-radius: 5px
+	-webkit-transition: all .05s
+	-moz-transition: all .05s
+	-ms-transition: all .05s
+	-o-transition: all .05s
 	text-align: center
 	margin-top: 15px
-	&:hover,
-		background: transparent
-		border-color: #ff382d
-		color: #ff382d
-	&:focus,
-	&:active,
-		background: #ff382d
+	&:hover
 		color: #fff
+		background-color: #f95d69
+	&:active,
+	&:focus
+		color: #fff
+		background-color: #d92d3a
+
 
 .tours-date
 	background: url('../img/tour-date-bg.jpg') no-repeat 0 0
@@ -714,7 +762,12 @@ body
 	outline: none
 	border: none
 	&:hover
-		
+		color: #fff
+		background-color: #f95d69
+	&:active,
+	&:focus
+		color: #fff
+		background-color: #d92d3a
 
 .tours-dates_content
 	padding: 0 15px
@@ -984,6 +1037,10 @@ body
 .participate-hold
 	width: 100%
 	background: -webkit-linear-gradient(left, #acbeee 0, #b8a9d3 50%, #c296ba 100%)
+	background: -moz-linear-gradient(left, #acbeee 0, #b8a9d3 50%, #c296ba 100%)
+	background: -ms-linear-gradient(left, #acbeee 0, #b8a9d3 50%, #c296ba 100%)
+	background: -o-linear-gradient(left, #acbeee 0, #b8a9d3 50%, #c296ba 100%)
+	background: linear-gradient(to right, #acbeee 0, #b8a9d3 50%, #c296ba 100%)
 	margin-bottom: 60px
 
 .participate
@@ -1057,6 +1114,10 @@ body
 	border-bottom: 1px solid rgba(0,0,0,.23)
 	width: 100%
 	outline: none
+
+.form-input.error
+	border-bottom-color: #ea4c58
+	color: #ea4c58
 	&:focus
 		color: #ea4c58
 		border-bottom-color: rgba(234,76,88,.25)
