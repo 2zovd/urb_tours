@@ -1499,6 +1499,18 @@ input[type='checkbox']:checked + label:after {
   font-family: 'RobotoSlabLight';
 }
 
+.footer-hold {
+  background: #eee;
+  padding: 40px 0;
+}
+
+.footer-nav-title {
+  font-family: "RobotoSlabBold";
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 17px;
+}
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
