@@ -30,13 +30,13 @@
 				<nav class="nav-tours">
 					<ul class="nav-tours_left">
 						<li><a href="#">Women profiles</a></li>
-						<li><a href="#" class="middle-link">Search</a></li>
+						<li class="middle-link"><a href="#">Search</a></li>
 						<li><a href="#">Services</a></li>
 					</ul>
 					<div class="behind-logo"></div>
 					<ul class="nav-tours_right">
 						<li><a href="#">Blog</a></li>
-						<li><a href="#" class="middle-link">Support</a></li>
+						<li class="middle-link"><a href="#">Support</a></li>
 						<li><a href="#">About Us</a></li>
 					</ul>
 				</nav>
@@ -363,12 +363,15 @@
 												<strong class="tours-dates_title">Tour dates</strong>
 												<div class="dates-holder">
 													<div class="date-block">
-														<div class="date-hold"></div>
-														<span>30.07.2017 - 05.08.2017 </span>
+														<div class="date-hold">
+															<span>30.07.2017 <em></em> 05.08.2017</span>
+														</div>
 														<a href="#" class="btn-tour">Participate</a>
 													</div>
 													<div class="date-block">
-														<span>06.08.2017 - 12.08.2017 </span>
+														<div class="date-hold">
+															<span>06.08.2017 <em></em> 12.08.2017</span>
+														</div>
 														<a href="#" class="btn-tour">Participate</a>
 													</div>
 												</div>
@@ -541,29 +544,40 @@
 									<h3 class="h3">Contact Us</h3>
 								</div>
 							</div>
-							<form class="contact-us-form">
+							<form class="contact-us-form" name="Contact us form" id="contact-form">
+								<div class="success">
+									<p>Thank you!</p>
+									<p>Your letter has been successfully sent...</p>
+									<img src="img/success-form.png" alt="Success form">
+								</div>
 								<div class="row">
-									<div class="col-md-5">
+									<div class="col-md-5 form-row_hold">
 										<input type="text" class="form-input" placeholder="Name">
+										<span class="error-message"></span>
 									</div>
-									<div class="col-md-5 col-md-offset-2">
+									<div class="col-md-5 col-md-offset-2 form-row_hold">
 										<input type="email" class="form-input" placeholder="Email">
+										<span class="error-message"></span>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-md-5">
+									<div class="col-md-5 form-row_hold">
 										<input type="text" class="form-input" placeholder="Country">
+										<span class="error-message"></span>
 									</div>
-									<div class="col-md-5 col-md-offset-2">
+									<div class="col-md-5 col-md-offset-2 form-row_hold">
 										<input type="text" class="form-input" placeholder="Skype">
+										<span class="error-message"></span>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-md-5">
-										<input type="text" class="form-input" placeholder="Phone number">
+									<div class="col-md-5 form-row_hold">
+										<input type="text" class="form-input error" placeholder="Phone number">
+										<span class="error-message">Enter correct phone number</span>
 									</div>
-									<div class="col-md-5 col-md-offset-2">
+									<div class="col-md-5 col-md-offset-2 form-row_hold">
 										<input type="text" class="form-input" placeholder="Link to your Facebook page">
+										<span class="error-message"></span>
 									</div>
 								</div>
 								<div class="row">
@@ -624,7 +638,7 @@
 										<input type="text" class="form-input" placeholder="Or enter preferred method of contact">
 									</div>
 								</div>
-								<button class="btn-tour">Send</button>
+								<button type="submit" class="btn-tour send">Send</button>
 							</form>
 
 						</div>
