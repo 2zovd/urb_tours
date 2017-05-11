@@ -263,16 +263,6 @@ body
 
 .banner-box_top
 	padding-left: 35px
-	position: relative
-	&:before
-		content: ''
-		position: absolute
-		left: 0
-		top: 0
-		width: 23px
-		height: 36px
-		display: block
-		background: url('../img/geo.png') no-repeat 0 0
 
 .banner-sticker
 	font-family: 'RobotoMedium'
@@ -285,6 +275,16 @@ body
 	margin-bottom: 25px
 	border-radius: 5px
 	color: #fff
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		left: -35px
+		top: 0
+		width: 23px
+		height: 36px
+		display: block
+		background: url('../img/geo.png') no-repeat 0 0
 
 .banner-title
 	font-family: "RobotoSlabBold"
@@ -476,8 +476,8 @@ body
 	-ms-justify-content: space-between
 	-o-justify-content: space-between
 	justify-content: space-between	
-	-ms-align-items: center
-	align-items: center	
+	-ms-align-items: stretch
+	align-items: stretch	
 	text-align: left
 
 .ladies-profile_left
@@ -615,13 +615,28 @@ body
 .search-profile-info
 	width: 45%
 	padding-left: 15px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	-webkit-justify-content: center
+	-moz-justify-content: center
+	-ms-justify-content: center
+	-o-justify-content: center
+	justify-content: center
+	-webkit-flex-direction: column
+	-moz-flex-direction: column
+	-ms-flex-direction: column
+	-o-flex-direction: column
+	flex-direction: column
 
 .profile-name
 	display: block
 	font-family: 'RobotoSlabBold'
 	letter-spacing: 0.7px
 	font-size: 21px
-	line-height: 25px
+	line-height: 31px
 	color: #000
 
 .card-hold
@@ -731,7 +746,8 @@ body
 .tours-date_block
 	border-radius: 10px
 	border: 2px solid #f24841
-	padding: 35px 0
+	padding-top: 35px
+	padding-bottom: 35px
 	min-height: 590px
 
 .tours-date_block-text
@@ -1120,6 +1136,12 @@ body
 	-ms-align-items: center
 	align-items: center
 	text-align: center
+	-webkit-flex-wrap: wrap
+	-moz-flex-wrap: wrap
+	-ms-flex-wrap: wrap
+	-o-flex-wrap: wrap
+	flex-wrap: wrap
+	padding: 25px 0
 	strong
 		font-family: 'RobotoBold'
 		font-size: 20px
@@ -1239,6 +1261,11 @@ body
 	justify-content: center
 	-ms-align-items: center
 	align-items: center
+	-webkit-flex-wrap: wrap
+	-moz-flex-wrap: wrap
+	-ms-flex-wrap: wrap
+	-o-flex-wrap: wrap
+	flex-wrap: wrap
 	margin-bottom: 30px
 
 .checkbox-item
@@ -1404,6 +1431,9 @@ input[type='checkbox']
 					transform: translateY(-50%) translateX(0px) rotate(0deg)
 					border-radius: 100px
 	
+.footer-logo_hold
+	text-align: right
+
 .footer-logo
 	display: inline-block
 	text-align: center
